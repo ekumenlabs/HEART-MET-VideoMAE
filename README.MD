@@ -4,13 +4,16 @@
 
 Olmer Garcia-Bedoya, Jose Tomas Lorente , Sebastian Murcia
 
-Ekumens Labs
+Ekumen Inc
 
 ## Introduction
 
-This report presents the methodology and some conclusions learned during the[icsr-2022 HEART-MET Assistive Robot Challenge](https://www.icsr2022.it/icsr-2022-metrics-heart-met-assistive-robot-challenge/). The task in the challenge is to recognize human activities from videos. The videos are recorded from robots operating in a domestic environment and include activities such as reading a book, drinking water, falling on the floor, etc. HEART-MET is one of the competitions in the METRICS project, which has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement No 871252. The competition aims to benchmark assistive robots performing healthcare-related tasks in unstructured domestic environments.
+This report presents the methodology and some conclusions learned during the[icsr-2022 HEART-MET Assistive Robot Challenge](https://www.icsr2022.it/icsr-2022-metrics-heart-met-assistive-robot-challenge/). The result of the challenge can be seen in [CodeLab](https://codalab.lisn.upsaclay.fr/competitions/8189).
 
-[Ekumen Labs](https://www.ekumenlabs.com/) is an international engineering boutique, provider of advanced software development services and technology. We specialize in bridging the gap between scientific research and deployable software products, with experience in open source projects like ROS. We specialize in the following areas: Robotics Software Applications, Web and Mobile Technology, Embedded Systems and augmented reality applications.
+
+The task in the challenge is to recognize human activities from videos. The videos are recorded from robots operating in a domestic environment and include activities such as reading a book, drinking water, falling on the floor, etc. HEART-MET is one of the competitions in the METRICS project, which has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement No 871252. The competition aims to benchmark assistive robots performing healthcare-related tasks in unstructured domestic environments.
+
+[Ekumen Inc](https://www.ekumenlabs.com/) is an international engineering boutique, provider of advanced software development services and technology. We specialize in bridging the gap between scientific research and deployable software products, with experience in open source projects like ROS. We specialize in the following areas: Robotics Software Applications, Web and Mobile Technology, Embedded Systems and augmented reality applications.
 
 After getting a lot of data successfully in natural language processing (NLP) by self-supervised learning. The solutions, based on autoregressive language modeling in GPT and masked autoencoding in BERT , are conceptually simple:they remove a portion of the data and learn to predict the removed content. Application of transformer in images start with [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/pdf/2010.11929.pdf), which outperform the current state-of-the-art (CNN) by almost x4 in terms of computational efficiency and accuracy, where Encoding: key,value(position in image of subimage, subimage). After this concept Facebook created [Masked Autoencoders Are Scalable Vision Learners](https://arxiv.org/pdf/2111.06377.pdf) which is the base of [VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training](https://arxiv.org/pdf/2203.12602.pdf) the model used during this challenge. In the next section is presented some insight about the methodology.
 
@@ -32,3 +35,9 @@ Next steps, after try balance the data , include start the pretraining from the 
 [1](#sdfootnote1anc) https://viso.ai/deep-learning/vision-transformer-vit/
 
 ![](RackMultipart20221202-1-uapuef_html_e7f3c6764ad67b57.jpg)
+
+## Licensing
+
+This code is licensed under the Apache License, Version 2.0.
+
+Copyright 2022- Ekumen Inc. All rights reserved.
